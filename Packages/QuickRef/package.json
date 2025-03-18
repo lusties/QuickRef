@@ -1,0 +1,19 @@
+{
+  "name": "com.lustie.quickref",
+  "version": "1.0.0",
+  "displayName": "QuickRef",
+  "description": "",
+  "unity": "2022.3",
+  "author": {
+    "name": "lustie",
+    "email": "",
+    "url": "https://github.com/lusties/QuickRef"
+  },
+  "samples": [
+    {
+      "displayName": "Quick Start",
+      "description": "Sample Usage of QuickRef",
+      "path": "Samples~"
+    }
+  ]
+}

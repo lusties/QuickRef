@@ -1,0 +1,16 @@
+{
+    "name": "Lustie.QuickRef.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:3c02babd9cd2a1f4191247ffc7ef6e9f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
