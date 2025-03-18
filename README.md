@@ -4,5 +4,5 @@
 
 Add from Git Url:
 ```
-https://github.com/lusties/QuickRef?path=Packages/QuickRef
+https://github.com/lusties/QuickRef.git?path=Packages/QuickRef
 ```
