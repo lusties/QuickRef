@@ -25,6 +25,7 @@ namespace Lustie.QuickRef.Editor
             if (property.objectReferenceValue == null)
             {
                 property.objectReferenceValue = objectValue;
+                property.serializedObject.ApplyModifiedPropertiesWithoutUndo();
             }
         }
     }

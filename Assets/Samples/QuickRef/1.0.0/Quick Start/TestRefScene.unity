@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 60608367}
   - component: {fileID: 60608369}
+  - component: {fileID: 60608370}
   m_Layer: 0
   m_Name: TestMonoBehaviour
   m_TagString: Untagged
@@ -177,6 +178,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &60608370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60608366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f07f4eff13321fd4fa8820a820aea88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slef_animator: {fileID: 60608369}
+  children_rigidbody: {fileID: 1776531285}
+  parent_sphereCollider: {fileID: 1755297746}
 --- !u!1 &696942609
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,7 +295,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1755297745}
   - component: {fileID: 1755297746}
-  - component: {fileID: 1755297747}
   m_Layer: 0
   m_Name: TestRefRoot
   m_TagString: Untagged
@@ -324,21 +339,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1755297747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1755297744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f07f4eff13321fd4fa8820a820aea88d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slef_animator: {fileID: 0}
-  children_rigidbody: {fileID: 1776531285}
-  parent_sphereCollider: {fileID: 1755297746}
 --- !u!1 &1776531283
 GameObject:
   m_ObjectHideFlags: 0
