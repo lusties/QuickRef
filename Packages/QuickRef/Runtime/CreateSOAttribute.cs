@@ -1,13 +1,14 @@
 ﻿using System;
+using UnityEngine;
 
 namespace Lustie.QuickRef
 {
     /// <summary>
-    /// Automatically get component in chidlren
+    /// Attribute for adding a CREATE button in the Unity inspector.
     /// </summary>
     [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = false)]
-    public class GetComponentInChildrenAttribute : GetComponentRelativeAttribute
+    public class CreateSOAttribute : PropertyAttribute
     {
-
     }
 }
+

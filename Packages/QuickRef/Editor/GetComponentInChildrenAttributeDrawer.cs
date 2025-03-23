@@ -1,16 +1,20 @@
-﻿using Lustie.QuickRef.Editor;
+﻿using System;
 using UnityEditor;
 using UnityEngine;
 
-namespace Lustie.QuickRef
+namespace Lustie.QuickRef.Editor
 {
     [CustomPropertyDrawer(typeof(GetComponentInChildrenAttribute))]
-    public class GetComponentInChildrenAttributeDrawer : QuickAttributeDrawer
+    public class GetComponentInChildrenAttributeDrawer : GetComponentRelativeAttributeDrawer<GetComponentInChildrenAttribute>
     {
-        protected override void OnDrawProperty(Rect position, SerializedProperty property, GUIContent label)
+        protected override Component GetComponentRelative(Component targetComponent, Type fieldType)
         {
-            property.AssignIfNull(property.TargetComponent().GetComponentInChildren(fieldInfo.FieldType));
-            EditorGUI.PropertyField(position, property, label);
+            return targetComponent.GetComponentInChildren(fieldInfo.FieldType);
+        }
+
+        protected override Component[] GetComponentsRelative(Component targetComponent, Type fieldType, bool includeInactive)
+        {
+            return targetComponent.GetComponentsInChildren(fieldInfo.FieldType, propertyAttribute.includeInactive);
         }
     }
 }

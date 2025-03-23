@@ -3,8 +3,11 @@ using UnityEngine;
 
 namespace Lustie.QuickRef.Editor
 {
-    public abstract class QuickAttributeDrawer : PropertyDrawer
+    public abstract class QuickAttributeDrawer<TAttribute> : PropertyDrawer
+        where TAttribute : PropertyAttribute
     {
+        protected TAttribute propertyAttribute => attribute as TAttribute;
+
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
             if (!property.IsUnityObject())

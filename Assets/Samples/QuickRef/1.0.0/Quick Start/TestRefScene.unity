@@ -190,9 +190,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f07f4eff13321fd4fa8820a820aea88d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slef_animator: {fileID: 60608369}
-  children_rigidbody: {fileID: 1776531285}
-  parent_sphereCollider: {fileID: 1755297746}
+  selfAnimator: {fileID: 60608369}
+  childrenRigidbody: {fileID: 1776531285}
+  parentSphereCollider: {fileID: 1755297746}
+  nonDisplayCamera: {fileID: 696942611}
+  shownCamera: {fileID: 696942611}
+  disabledNumber: 0
 --- !u!1 &696942609
 GameObject:
   m_ObjectHideFlags: 0

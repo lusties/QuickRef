@@ -1,13 +1,13 @@
 ﻿using System;
+using UnityEngine;
 
 namespace Lustie.QuickRef
 {
     /// <summary>
-    /// Automatically get component in chidlren
+    /// Disable the property, this will disallow modifying value in the inspector.
     /// </summary>
     [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = false)]
-    public class GetComponentInChildrenAttribute : GetComponentRelativeAttribute
+    public class MainCameraAttribute : PropertyAttribute
     {
-
     }
 }

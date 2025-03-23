@@ -1,5 +1,4 @@
 ﻿using System;
-using UnityEngine;
 
 namespace Lustie.QuickRef
 {
@@ -7,7 +6,7 @@ namespace Lustie.QuickRef
     /// Automatically get component in parent
     /// </summary>
     [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = false)]
-    public class GetComponentInParentAttribute : PropertyAttribute
+    public class GetComponentInParentAttribute : GetComponentRelativeAttribute
     {
     }
 }

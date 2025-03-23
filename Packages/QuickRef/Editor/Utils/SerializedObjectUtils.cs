@@ -20,9 +20,9 @@ namespace Lustie.QuickRef.Editor
             return serializedProperty.propertyType == SerializedPropertyType.ObjectReference;
         }
 
-        public static void AssignIfNull(this SerializedProperty property, Object objectValue)
+        public static void AssignIfNotEqual(this SerializedProperty property, Object objectValue)
         {
-            if (property.objectReferenceValue == null)
+            if (property.objectReferenceValue == null || property.objectReferenceValue != objectValue)
             {
                 property.objectReferenceValue = objectValue;
                 property.serializedObject.ApplyModifiedPropertiesWithoutUndo();

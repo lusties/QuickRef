@@ -8,10 +8,12 @@ namespace Lustie.QuickRef.Editor
     {
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
+            using var propertyScope = new EditorGUI.PropertyScope(position, label, property);
+
             bool wasEnabled = GUI.enabled;
             GUI.enabled = false;
 
-            EditorGUI.PropertyField(position, property, label, false);
+            EditorGUI.PropertyField(position, property, label);
 
             GUI.enabled = wasEnabled;
         }

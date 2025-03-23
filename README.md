@@ -2,7 +2,7 @@
 
 ## Installation
 
-Add from Git URL:
+[Add from Git URL:](https://github.com/lusties/QuickRef.git?path=Packages/QuickRef)
 ```
 https://github.com/lusties/QuickRef.git?path=Packages/QuickRef
 ```
