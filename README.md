@@ -28,3 +28,25 @@ public class ExampleBehaviour : MonoBehaviour
 }
 ```
 
+If you want to hide a field from the Inspector, use the `[NoDisplay]` attribute in order:
+
+```C#
+[SerializeField]    // this for serialize private field
+[FindObjectOfType]  // find object of type
+[NoDisplay]         // hide in normal inspector
+private Camera noDisplayedCamera;
+```
+
+## Attribute List
+
+## Attribute List
+
+| Attribute                | Description                                                        |
+|--------------------------|--------------------------------------------------------------------|
+| `[GetComponent]`         | Automatically references the component on the same GameObject.     |
+| `[GetComponentInChildren]` | Automatically references the component in the children of the GameObject. |
+| `[GetComponentInParent]` | Automatically references the component in the parent of the GameObject. |
+| `[FindObjectOfType]`     | Finds an object of the specified type in the scene.                |
+| `[NoDisplay]`            | Hides the field from being displayed in the Inspector.             |
+
+

@@ -4,10 +4,10 @@ using UnityEngine;
 namespace Lustie.QuickRef
 {
     /// <summary>
-    /// Automatically get component in chidlren
+    /// Automatically find gameobject of Type
     /// </summary>
     [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = false)]
-    public class GetComponentInChildrenAttribute : PropertyAttribute
+    public class FindObjectOfTypeAttribute : PropertyAttribute
     {
     }
 }

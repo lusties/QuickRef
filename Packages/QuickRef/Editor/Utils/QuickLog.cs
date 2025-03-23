@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
 namespace Lustie.QuickRef.Editor
@@ -13,14 +7,14 @@ namespace Lustie.QuickRef.Editor
     {
         public static void NotUnityObjectError(SerializedProperty property, PropertyDrawer drawer)
         {
-            var drawerAttribute = drawer.GetType().GetCustomAttribute<CustomPropertyDrawer>();
-            if (drawerAttribute == null)
-                return;
+            //var drawerAttribute = drawer.GetType().GetCustomAttribute<CustomPropertyDrawer>();
+            //if (drawerAttribute == null)
+            //    return;
 
-            var typeInfo = typeof(CustomPropertyDrawer).GetField("m_Type", BindingFlags.Instance | BindingFlags.NonPublic);
-            Type customAttribute = typeInfo.GetValue(drawerAttribute) as Type;
+            //var typeInfo = typeof(CustomPropertyDrawer).GetField("m_Type", BindingFlags.Instance | BindingFlags.NonPublic);
+            //Type customAttribute = typeInfo.GetValue(drawerAttribute) as Type;
 
-            Debug.LogError($"Field {property.name} is not an unity object and cannot be used with {nameof(customAttribute)}");
+            Debug.LogError($"Field {property.name} is not an unity object and cannot be used with {nameof(drawer.attribute)}");
         }
     }
 }
