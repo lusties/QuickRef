@@ -20,8 +20,10 @@ namespace Lustie.QuickRef.Editor
             return serializedProperty.propertyType == SerializedPropertyType.ObjectReference;
         }
 
-        public static void AssignIfNotEqual(this SerializedProperty property, Object objectValue)
+        public static void AssignIfNotEqual(this SerializedProperty property, Object objectValue, bool ignorenWhilePlaying = true)
         {
+            if (ignorenWhilePlaying && Application.isPlaying)
+                return;
             if (property.objectReferenceValue == null || property.objectReferenceValue != objectValue)
             {
                 property.objectReferenceValue = objectValue;
