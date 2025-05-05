@@ -19,9 +19,10 @@ namespace Lustie.QuickRef.Editor
             if (GUI.Button(position, new GUIContent("Create")))
             {
                 var className = fieldInfo.FieldType.FullName;
+                var objectName = property.objectReferenceValue ? property.objectReferenceValue.name : "NewAsset";
                 var newScriptableObject = ScriptableObjectUtility.CreateAsset(className,
                     $"Create New {className} Asset",
-                    $"New {fieldInfo.FieldType.Name} Asset", "");
+                    $"{objectName}_{fieldInfo.FieldType.Name} Asset", "");
 
                 if (newScriptableObject)
                     property.AssignIfNotEqual(newScriptableObject);
